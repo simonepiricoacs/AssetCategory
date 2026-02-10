@@ -1,0 +1,1 @@
+# AssetCategory Model Module
