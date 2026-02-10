@@ -1,0 +1,9 @@
+{
+    "generator-hyperiot": {
+        "inner-project": true,
+        "project-type": "custom",
+        "projectName": "AssetCategory-service-integration",
+        "projectGroupId": "it.water.assetcategory",
+        "projectVersion": "project.waterVersion"
+    }
+}
