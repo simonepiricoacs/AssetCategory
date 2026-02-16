@@ -31,7 +31,6 @@ public class AssetCategoryServiceImpl extends BaseEntityServiceImpl<AssetCategor
         
         super(AssetCategory.class);
     }
-    
-    //todo: add custom logic here...
+
     //use getLog to retrieve Logger instance automatically instantiated for this class
 }

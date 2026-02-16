@@ -37,7 +37,6 @@ public class AssetCategoryRestControllerImpl extends BaseEntityRestApi<AssetCate
     //All CRUD methods are already exposed by AssetCategoryRestApi interface with JAXRS Annotatiosn
     //if you need to check which methods are exposed please go to it.water.assetcategory.api.rest.AssetCategory
 
-    //todo add custom exposed methods or override CRUD operations
     //ATTENTION: use always AssetCategoryApi in order to ensure the user is requesting operations has the right privileges to do it
 
 }

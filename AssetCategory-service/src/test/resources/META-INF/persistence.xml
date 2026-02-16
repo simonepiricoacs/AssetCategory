@@ -22,7 +22,7 @@
 
     <persistence-unit name="water-default-persistence-unit" transaction-type="RESOURCE_LOCAL">
         <class>it.water.assetcategory.model.AssetCategory</class>
-        <class>it.water.assetcategory.model.AssetCategoryResource</class>
+        <class>it.water.assetcategory.model.WaterAssetCategoryResource</class>
         <properties>
             <!-- Configurazione della connessione al database -->
             <property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver"/>

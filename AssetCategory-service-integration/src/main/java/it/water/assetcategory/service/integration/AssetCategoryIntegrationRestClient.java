@@ -9,26 +9,25 @@ import it.water.core.interceptors.annotations.FrameworkComponent;
 @FrameworkComponent
 public class AssetCategoryIntegrationRestClient implements EntityRemoteIntegrationClient, AssetCategoryIntegrationClient {
 
-    //private DiscoverableServiceInfo serviceInfo;
 
     @Override
     public void setup(DiscoverableServiceInfo serviceInfo) {
-        //this.serviceInfo = serviceInfo;
     }
 
     @Override
     public AssetCategoryResource findAssetCategoryResource(String resourceName, long resourceId, long categoryId) {
+        //todo rest call
         return null;
     }
 
     @Override
     public void addAssetCategory(String resourceName, long resourceId, long categoryId) {
-
+        //todo rest call
     }
 
     @Override
     public void addAssetCategories(String resourceName, long resourceId, long[] categoriesId) {
-
+        //todo rest call
     }
 
     @Override
@@ -38,11 +37,11 @@ public class AssetCategoryIntegrationRestClient implements EntityRemoteIntegrati
 
     @Override
     public void removeAssetCategory(String resourceName, long resourceId, long categoryId) {
-
+        //todo rest call
     }
 
     @Override
     public void removeAssetCategories(String resourceName, long resourceId, long[] categoriesId) {
-
+        //todo rest call
     }
 }

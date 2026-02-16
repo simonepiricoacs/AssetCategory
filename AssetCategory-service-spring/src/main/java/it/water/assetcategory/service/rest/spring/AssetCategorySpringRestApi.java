@@ -15,7 +15,6 @@
  */
 
 package it.water.assetcategory.service.rest.spring;
-import it.water.assetcategory.api.*;
 import it.water.assetcategory.api.rest.*;
 import it.water.assetcategory.model.*;
 

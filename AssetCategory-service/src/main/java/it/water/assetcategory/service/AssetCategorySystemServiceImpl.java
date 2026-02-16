@@ -3,8 +3,9 @@ package it.water.assetcategory.service;
 import it.water.assetcategory.api.AssetCategoryRepository;
 import it.water.assetcategory.api.AssetCategorySystemApi;
 import it.water.assetcategory.model.AssetCategory;
-import it.water.assetcategory.model.AssetCategoryResource;
+import it.water.assetcategory.model.WaterAssetCategoryResource;
 import it.water.core.api.asset.AssetCategoryManager;
+import it.water.core.api.model.AssetCategoryResource;
 import it.water.core.api.model.PaginableResult;
 import it.water.core.api.registry.filter.ComponentFilterBuilder;
 import it.water.core.interceptors.annotations.*;
@@ -41,11 +42,11 @@ public class AssetCategorySystemServiceImpl extends BaseEntitySystemServiceImpl<
     }
 
     /**
-     * Find an AssetCategoryResource by its parameters.
+     * Find an WaterAssetCategoryResource by its parameters.
      * Delegates to Repository for the actual query.
      */
     @Override
-    public it.water.core.api.model.AssetCategoryResource findAssetCategoryResource(String resourceName, long resourceId, long categoryId) {
+    public AssetCategoryResource findAssetCategoryResource(String resourceName, long resourceId, long categoryId) {
         return repository.findAssetCategoryResource(resourceName, resourceId, categoryId);
     }
 
@@ -56,13 +57,10 @@ public class AssetCategorySystemServiceImpl extends BaseEntitySystemServiceImpl<
     public void addAssetCategory(String resourceName, long resourceId, long categoryId) {
         getLog().debug("Adding AssetCategory {} to resource: {} - {}", categoryId, resourceName, resourceId);
         AssetCategory category = this.find(categoryId);
-        if (category != null) {
-            // Check if association already exists
-            if (findAssetCategoryResource(resourceName, resourceId, categoryId) == null) {
-                AssetCategoryResource acr = new AssetCategoryResource(resourceName, resourceId, category);
+        if (category != null && findAssetCategoryResource(resourceName, resourceId, categoryId) == null) {
+                WaterAssetCategoryResource acr = new WaterAssetCategoryResource(resourceName, resourceId, category);
                 category.getResources().add(acr);
                 this.update(category);
-            }
         }
     }
 
@@ -109,8 +107,8 @@ public class AssetCategorySystemServiceImpl extends BaseEntitySystemServiceImpl<
         AssetCategory category = this.find(categoryId);
         if (category != null && category.getResources() != null) {
             // Find and remove the resource from the collection
-            AssetCategoryResource toRemove = null;
-            for (AssetCategoryResource acr : category.getResources()) {
+            WaterAssetCategoryResource toRemove = null;
+            for (WaterAssetCategoryResource acr : category.getResources()) {
                 if (acr.getResourceName().equals(resourceName) && acr.getResourceId() == resourceId) {
                     toRemove = acr;
                     break;

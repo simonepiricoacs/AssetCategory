@@ -94,6 +94,6 @@ public class AssetCategory extends AbstractJpaExpandableEntity implements Protec
      */
     @JsonIgnore
     @OneToMany(mappedBy = "category", orphanRemoval = true, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private Set<AssetCategoryResource> resources = new HashSet<>();
+    private Set<WaterAssetCategoryResource> resources = new HashSet<>();
 
 }
