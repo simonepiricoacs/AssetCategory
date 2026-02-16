@@ -1,7 +1,7 @@
 package it.water.assetcategory.api;
 
 import it.water.assetcategory.model.AssetCategory;
-import it.water.assetcategory.model.AssetCategoryResource;
+import it.water.assetcategory.model.WaterAssetCategoryResource;
 import it.water.core.api.repository.BaseRepository;
 
 /**
@@ -12,11 +12,11 @@ import it.water.core.api.repository.BaseRepository;
 public interface AssetCategoryRepository extends BaseRepository<AssetCategory> {
 
     /**
-     * Find an AssetCategoryResource by its parameters
+     * Find an WaterAssetCategoryResource by its parameters
      * @param resourceName the resource class name
      * @param resourceId the resource primary key
      * @param categoryId the category id
-     * @return the found AssetCategoryResource or null
+     * @return the found WaterAssetCategoryResource or null
      */
-    AssetCategoryResource findAssetCategoryResource(String resourceName, long resourceId, long categoryId);
+    WaterAssetCategoryResource findAssetCategoryResource(String resourceName, long resourceId, long categoryId);
 }

@@ -3,9 +3,7 @@ package it.water.assetcategory.service.rest.spring;
 
 import it.water.assetcategory.service.rest.AssetCategoryRestControllerImpl;
 import it.water.core.api.model.*;
-import it.water.core.api.repository.*;
 import it.water.core.api.repository.query.*;
-import it.water.assetcategory.api.*;
 import it.water.assetcategory.model.*;
 import org.springframework.web.bind.annotation.RestController;
 

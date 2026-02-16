@@ -2,7 +2,7 @@ package it.water.assetcategory.repository;
 
 import it.water.assetcategory.api.AssetCategoryRepository;
 import it.water.assetcategory.model.AssetCategory;
-import it.water.assetcategory.model.AssetCategoryResource;
+import it.water.assetcategory.model.WaterAssetCategoryResource;
 import it.water.core.interceptors.annotations.FrameworkComponent;
 import it.water.repository.jpa.WaterJpaRepositoryImpl;
 import org.slf4j.Logger;
@@ -26,12 +26,12 @@ public class AssetCategoryRepositoryImpl extends WaterJpaRepositoryImpl<AssetCat
     }
 
     /**
-     * Find an AssetCategoryResource by its parameters.
+     * Find an WaterAssetCategoryResource by its parameters.
      * This is a query method, so it belongs in the Repository.
      */
     @Override
-    public AssetCategoryResource findAssetCategoryResource(String resourceName, long resourceId, long categoryId) {
-        log.debug("Finding AssetCategoryResource for resource: {} - {} in category: {}",
+    public WaterAssetCategoryResource findAssetCategoryResource(String resourceName, long resourceId, long categoryId) {
+        log.debug("Finding WaterAssetCategoryResource for resource: {} - {} in category: {}",
                 resourceName, resourceId, categoryId);
         AssetCategory category = this.find(categoryId);
         if (category != null && category.getResources() != null) {
