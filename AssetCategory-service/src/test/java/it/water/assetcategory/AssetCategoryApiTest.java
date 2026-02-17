@@ -452,11 +452,6 @@ class AssetCategoryApiTest implements Service {
     }
 
 
-
-
-
-
-
     /**
      * Cleanup - remove all test entities
      */
@@ -472,6 +467,7 @@ class AssetCategoryApiTest implements Service {
                 // Ignore errors
             }
         });
+        Assertions.assertEquals(0, this.assetCategoryApi.findAll(null, -1, -1, null).getResults().size());
     }
 
     private AssetCategory createAssetCategory(int seed) {
