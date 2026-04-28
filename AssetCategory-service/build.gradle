@@ -92,3 +92,13 @@ publishing {
         	}
     }
  }
+
+waterDescriptor {
+    moduleId    = 'it.water.asset.category'
+    displayName = 'Asset Category Service'
+    description = 'Asset category management service for organizing and classifying Water Framework assets'
+
+    input {
+        standardPin 'service-discovery'
+    }
+}
