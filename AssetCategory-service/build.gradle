@@ -97,6 +97,9 @@ waterDescriptor {
     moduleId    = 'it.water.asset.category'
     displayName = 'Asset Category Service'
     description = 'Asset category management service for organizing and classifying Water Framework assets'
+    componentsPackage = 'it.water.assetcategory.service'
+    repositoryPackage = 'it.water.assetcategory.repository'
+    entitiesPackage   = 'it.water.assetcategory.model'
 
     input {
         standardPin 'service-discovery'
